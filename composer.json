@@ -1,5 +1,5 @@
 {
-  "name": "kabbouchi/laravel-logger-discord-channel",
+  "name": "micaela-visser/laravel-logger-discord-channel",
   "description": "A Discord based Monolog driver for Laravel",
   "keywords": [
     "laravel",
@@ -11,6 +11,10 @@
     {
       "name": "Georges KABBOUCHI",
       "email": "georges.kabbouchi@gmail.com"
+    },
+	{
+      "name": "Micaela Visser",
+      "email": "micaela.visser@nimblegravity.com"
     }
   ],
   "require": {
