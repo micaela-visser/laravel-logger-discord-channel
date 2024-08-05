@@ -2,6 +2,7 @@
 
 namespace KABBOUCHI\LoggerDiscordChannel;
 
+use Exception;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\RequestOptions;
 use Monolog\Formatter\LineFormatter;
@@ -66,9 +67,11 @@ class DiscordHandler extends AbstractProcessingHandler
 
 
         // Send it to discord
-        $this->guzzle->request('POST', $this->webhook, [
-            RequestOptions::JSON => $log,
-        ]);
+		try {
+			$this->guzzle->request('POST', $this->webhook, [
+				RequestOptions::JSON => $log,
+			]);
+		} catch(Exception $ex) {}
     }
 }
 
